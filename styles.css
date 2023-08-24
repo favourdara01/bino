@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'ralewayregular';
+}
+
+.container{
+    background: url(images/homebg.jpg) no-repeat;
+    /* background: cover; */
+}
+.overlay {
+    background-color: rgba(41, 39, 34, 0.75);
+    width: 100%;
+    height: 100%;
+}
+.nav-bar{
+    height: 70px;
+    background: transparent;
+}
+
+.brand{
+    float: left;
+    position: absolute;
+    padding-left: 20px;
+    line-height: 70px;
+    font-size: 1.5em;
+    margin-top: 23px;
+}
+
+.brand a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav{
+    float: right;
+    /* margin-right: -76px; */
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    float: left;
+
+    position: relative;
+}
+
+nav ul li a{
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    background: transparent;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover{
+    /* background: #2ab1ce; */
+    /* color: #fff; */
+    color: rgb(182, 78,67);
+}
+
+nav ul li a:not(:only-child):after{
+    content: '▼';
+    padding-left: 5px;
+
+}
+
+nav ul li ul li {
+    min-width: 190px;
+}
+
+nav ul li ul li a{
+    padding: 15px;
+    line-height: 20px;
+}
+
+.nav-dropdown{
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+.nav-mobile{
+    display: none;
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    height: 70px;
+    width: 70px;
+}
+
+#nav-toggle{
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 15px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span::before,
+#nav-toggle span::after{
+    position: absolute;
+    display: block;
+    content: '';
+
+    background: #fff;
+    height: 5px;
+    width: 35px;
+    transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span::before{
+    top: -10px;
+}
+
+#nav-toggle span::after{
+    bottom: -10px;
+}
+
+#nav-toggle.active span{
+    background-color: transparent;
+}
+
+#nav-toggle.active span::before, #nav-toggle.active span::after{
+
+    top: 0;
+}
+
+#nav-toggle.active span::before{
+    transform: rotate(45deg);
+}
+
+#nav-toggle.active span::after{
+    transform: rotate(-45deg);
+}
+
+.do{
+    display: flex;
+    justify-content: space-between;
+}
+.right{
+    margin-top: 18rem;
+    margin-left: 4rem;
+
+}
+.right i{
+    color: black;
+    transition: transform 500ms ease-out;
+}
+.main-section{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    animation: mymove 5s 1;
+    animation-timing-function: ease;
+    position: relative;
+    
+
+    
+}
+/* @keyframes mymove {
+    from {left: 0px;}
+    to {left: 300vh;}
+  } */
+.main-section h3{
+    font-family: 'source_sans_proregular';
+    font-size: 1.714rem;
+    line-height: 2.5rem;
+}
+.main-section h1{
+    font-family: 'open_sansbold';
+    font-size: 5.143rem;
+    line-height: 5.5rem;
+    color: #fff;
+    letter-spacing: .4rem;
+    font-weight: 300;
+    /* animation: mymove 5s 1;
+    animation-timing-function: ease-out;
+    position: relative; */
+    
+}
+/* @keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+  } */
+
+.main-section p{
+    text-align: center;
+}
+.button-div{
+    margin-top: 60px;
+   
+}
+.button-div .btn{
+    background-color:rgb(231,76,60);
+    color:white ;
+    border: none;
+    padding: 10px;
+    width: 190px ;
+    margin-right: 10px;
+    cursor: pointer;
+    height: 47px;
+}
+.button-div .btn1{
+    background-color: transparent;
+    border: solid 1px white;
+    padding: 10px;
+    width: 190px ;
+    cursor: pointer;
+    color: white;
+    height: 47px;
+}
+.button-div .btn1:hover{
+    background:rgb(231,76,60) ;
+    border: none;
+}
+.left{
+    margin-top: 18rem;
+    margin-right: 4rem;  
+}
+.left i{
+    color: black;
+
+}
+/* @media (max-width : 430px) {
+    .nav ul li a {
+        padding-left: 800px;
+    }
+ } */
+
+@media  (max-width: 768px) {
+
+    .nav-mobile{
+        display: block;
+    }
+
+    nav{
+        width: 100%;
+        float: none;
+        padding: 41px 0 4px;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav ul li {
+        float: none;
+    }
+
+    nav ul li a{
+        padding: 15px;
+        line-height: 10px;
+        padding-left: 69%;
+    }
+
+
+    nav ul li ul li a{
+        padding-left: 30%;
+
+    }
+
+    .nav-dropdown{
+        position: static;
+    }
+}
+@media (max-width: 587px) {
+    .main-section h3{
+        text-align: center;
+    }
+    .main-section h1{
+        letter-spacing: none;
+    }
+}
+/* @media screen and (min-width: 799px){
+    .nav-list{
+        display: block !important;
+    }
+} */
+@media  (max-width: 413px) {
+
+    .nav-mobile{
+        display: block;
+    }
+
+    nav{
+        width: 100%;
+
+        padding: 70px 0 15px;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav ul li {
+        float: none;
+    }
+
+    nav ul li a{
+        padding: 15px;
+        line-height: 10px;
+        padding-left: 65%;
+    }
+
+
+    nav ul li ul li a{
+        padding-left: 30%;
+
+    }
+
+    .nav-dropdown{
+        position: static;
+    }
+}
+@media (max-width: 1050px) {
+    .main-section h1{
+        text-align: center;
+    }
+}
+ @media (max-width: 860px) {
+     .main-section h1{
+         text-align: center;
+     }
+ }
+ @media (max-width: 766px) {
+     /* .logo img{
+         width: 39vh;
+     }
+     .links{
+         display: none;
+     } */
+ }
+
+ @media (max-width: 650px) {
+     .main-section h1{
+         font-size: 70px;
+     }
+ }
+ @media (max-width: 659px) {
+   
+}
+ @media (max-width: 540px) {
+     .main-section h1{
+         font-size: 50px;
+         line-height: 4rem;
+     }
+     .button-div{
+        margin-left: 68px;
+     }
+     .btn{
+        margin-bottom: 20px;
+     }
+     
+ }
+ @media (max-width: 394px) {
+    .right{
+        margin-left: 1rem;
+    }
+ }
+ @media (max-width: 370px) {
+    .right{
+        margin-left: 0.5rem;
+    }
+ }
+ @media (max-width: 360px) {
+    .right{
+        margin-left: 0rem;
+    }
+ }
+ 
